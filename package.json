@@ -14,8 +14,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "vuepress": "^1.4.0"
-  }
+  "dependencies": {
+    "vuepress": "^1.4.1"
+  },
+  "devDependencies": {}
 }

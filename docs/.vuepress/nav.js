@@ -15,11 +15,5 @@ module.exports = [{
 			text:"Vue",
 			link:"/Vue/Vue.md"
 		}]
-	},
-	{
-		text:"后端",
-		items:[{
-			
-		}]
 	}
 ]
