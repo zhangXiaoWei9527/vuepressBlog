@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>4. 使用webpack打包TS | 小张小张有点嚣张</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="个人博客">
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.c1b405af.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/2.c2e3befc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/14.cda0af41.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.0aeed0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d3c9595c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.2ca11fc2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.ef8ea748.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.8cf3c9a9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/16.37b18be4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.35e21df8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.a4f3ce87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.9c386264.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.0c6eacb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.ccce3d92.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.3dadc292.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.9a6c3566.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.ab8ccb6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.d9ea8933.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.5ab485cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.57728a4e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/3.4718697e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.c32c57ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.71a90178.js"><link rel="prefetch" href="/vuepressBlog/assets/js/6.5781d4ba.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.e56e811f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/8.36e130b0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/9.1af2aa3c.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">小张小张有点嚣张</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>初识 TypeScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="sidebar-link">1. 初识 TypeScript</a></li><li><a href="/vuepressBlog/TypeScript/chapter1/02_安装TS.html" class="sidebar-link">2. 安装 TypeScript</a></li><li><a href="/vuepressBlog/TypeScript/chapter1/03_HelloWorld.html" class="sidebar-link">3. 第一个 TypeScript 程序</a></li><li><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html" class="active sidebar-link">4. 使用webpack打包TS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html#下载依赖" class="sidebar-link">下载依赖</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html#入口js-src-main-ts" class="sidebar-link">入口JS: src/main.ts</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html#build-webpack-config-js" class="sidebar-link">build/webpack.config.js</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html#配置打包命令" class="sidebar-link">配置打包命令</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html#运行与打包" class="sidebar-link">运行与打包</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>TypeScript 常用语法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/TypeScript/chapter2/1_type.html" class="sidebar-link">1. 基础类型</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html" class="sidebar-link">2. 接口</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/3_class.html" class="sidebar-link">3. 类</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/4_function.html" class="sidebar-link">4. 函数</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/5_generic.html" class="sidebar-link">5. 泛型</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/6_other.html" class="sidebar-link">6. 其它</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React &amp; Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/TypeScript/chapter3/1_react.html" class="sidebar-link">React</a></li><li><a href="/vuepressBlog/TypeScript/chapter3/2_vue.html" class="sidebar-link">Vue</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_4-使用webpack打包ts"><a href="#_4-使用webpack打包ts" class="header-anchor">#</a> 4. 使用webpack打包TS</h1> <h2 id="下载依赖"><a href="#下载依赖" class="header-anchor">#</a> 下载依赖</h2> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D typescript
+yarn add -D webpack webpack-cli
+yarn add -D webpack-dev-server
+yarn add -D html-webpack-plugin clean-webpack-plugin
+yarn add -D ts-loader
+yarn add -D cross-env
+</code></pre></div><h2 id="入口js-src-main-ts"><a href="#入口js-src-main-ts" class="header-anchor">#</a> 入口JS: src/main.ts</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// import './01_helloworld'</span>
+
+document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">'Hello Webpack TS!'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="build-webpack-config-js"><a href="#build-webpack-config-js" class="header-anchor">#</a> build/webpack.config.js</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>CleanWebpackPlugin<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'clean-webpack-plugin'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> isProd <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span> <span class="token comment">// 是否生产环境</span>
+
+<span class="token keyword">function</span> <span class="token function">resolve</span> <span class="token punctuation">(</span><span class="token parameter">dir</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> dir<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  mode<span class="token operator">:</span> isProd <span class="token operator">?</span> <span class="token string">'production'</span> <span class="token operator">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span>
+  entry<span class="token operator">:</span> <span class="token punctuation">{</span>
+    app<span class="token operator">:</span> <span class="token string">'./src/main.ts'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    filename<span class="token operator">:</span> <span class="token string">'[name].[contenthash:8].js'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  module<span class="token operator">:</span> <span class="token punctuation">{</span>
+    rules<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        test<span class="token operator">:</span> <span class="token regex">/\.tsx?$/</span><span class="token punctuation">,</span>
+        use<span class="token operator">:</span> <span class="token string">'ts-loader'</span><span class="token punctuation">,</span>
+        include<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">new</span> <span class="token class-name">CleanWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+    <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      template<span class="token operator">:</span> <span class="token string">'./public/index.html'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+    extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.ts'</span><span class="token punctuation">,</span> <span class="token string">'.tsx'</span><span class="token punctuation">,</span> <span class="token string">'.js'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  devtool<span class="token operator">:</span> isProd <span class="token operator">?</span> <span class="token string">'cheap-module-source-map'</span> <span class="token operator">:</span> <span class="token string">'cheap-module-eval-source-map'</span><span class="token punctuation">,</span>
+
+  devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+    contentBase<span class="token operator">:</span> <span class="token string">'./dist'</span><span class="token punctuation">,</span> <span class="token comment">// 服务器加载资源的基础路径</span>
+    host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span> <span class="token comment">// 主机名</span>
+    stats<span class="token operator">:</span> <span class="token string">'errors-only'</span><span class="token punctuation">,</span> <span class="token comment">// 打包日志输出输出错误信息</span>
+    port<span class="token operator">:</span> <span class="token number">8081</span><span class="token punctuation">,</span>
+    open<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="配置打包命令"><a href="#配置打包命令" class="header-anchor">#</a> 配置打包命令</h2> <div class="language- extra-class"><pre class="language-text"><code>&quot;dev&quot;: &quot;cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js&quot;,
+&quot;build&quot;: &quot;cross-env NODE_ENV=production webpack --config build/webpack.config.js&quot;,
+</code></pre></div><h2 id="运行与打包"><a href="#运行与打包" class="header-anchor">#</a> 运行与打包</h2> <div class="language- extra-class"><pre class="language-text"><code>yarn dev
+yarn build
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zhangweigaizhe/vuepressBlog/edit/master/TypeScript/chapter1/04_webpack打包.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页 ！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">5/5/2020, 12:36:34 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepressBlog/TypeScript/chapter1/03_HelloWorld.html" class="prev">
+        3. 第一个 TypeScript 程序
+      </a></span> <span class="next"><a href="/vuepressBlog/TypeScript/chapter2/1_type.html">
+        1. 基础类型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepressBlog/assets/js/app.c1b405af.js" defer></script><script src="/vuepressBlog/assets/js/2.c2e3befc.js" defer></script><script src="/vuepressBlog/assets/js/14.cda0af41.js" defer></script>
+  </body>
+</html>

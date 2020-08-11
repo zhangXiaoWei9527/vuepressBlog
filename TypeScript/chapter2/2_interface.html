@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2. 接口 | 小张小张有点嚣张</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="个人博客">
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.c1b405af.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/2.c2e3befc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/16.37b18be4.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.0aeed0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d3c9595c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.2ca11fc2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.ef8ea748.js"><link rel="prefetch" href="/vuepressBlog/assets/js/14.cda0af41.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.8cf3c9a9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.35e21df8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.a4f3ce87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.9c386264.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.0c6eacb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.ccce3d92.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.3dadc292.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.9a6c3566.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.ab8ccb6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.d9ea8933.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.5ab485cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.57728a4e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/3.4718697e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.c32c57ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.71a90178.js"><link rel="prefetch" href="/vuepressBlog/assets/js/6.5781d4ba.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.e56e811f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/8.36e130b0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/9.1af2aa3c.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">小张小张有点嚣张</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>初识 TypeScript</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="sidebar-link">1. 初识 TypeScript</a></li><li><a href="/vuepressBlog/TypeScript/chapter1/02_安装TS.html" class="sidebar-link">2. 安装 TypeScript</a></li><li><a href="/vuepressBlog/TypeScript/chapter1/03_HelloWorld.html" class="sidebar-link">3. 第一个 TypeScript 程序</a></li><li><a href="/vuepressBlog/TypeScript/chapter1/04_webpack打包.html" class="sidebar-link">4. 使用webpack打包TS</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TypeScript 常用语法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/TypeScript/chapter2/1_type.html" class="sidebar-link">1. 基础类型</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html" class="active sidebar-link">2. 接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#接口初探" class="sidebar-link">接口初探</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#可选属性" class="sidebar-link">可选属性</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#只读属性" class="sidebar-link">只读属性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#readonly-vs-const" class="sidebar-link">readonly vs const</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#函数类型" class="sidebar-link">函数类型</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#类类型" class="sidebar-link">类类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#类实现接口" class="sidebar-link">类实现接口</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#一个类可以实现多个接口" class="sidebar-link">一个类可以实现多个接口</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/TypeScript/chapter2/2_interface.html#接口继承接口" class="sidebar-link">接口继承接口</a></li></ul></li><li><a href="/vuepressBlog/TypeScript/chapter2/3_class.html" class="sidebar-link">3. 类</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/4_function.html" class="sidebar-link">4. 函数</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/5_generic.html" class="sidebar-link">5. 泛型</a></li><li><a href="/vuepressBlog/TypeScript/chapter2/6_other.html" class="sidebar-link">6. 其它</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React &amp; Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepressBlog/TypeScript/chapter3/1_react.html" class="sidebar-link">React</a></li><li><a href="/vuepressBlog/TypeScript/chapter3/2_vue.html" class="sidebar-link">Vue</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2-接口"><a href="#_2-接口" class="header-anchor">#</a> 2. 接口</h1> <p>TypeScript 的核心原则之一是对值所具有的结构进行类型检查。我们使用接口（Interfaces）来定义对象的类型。<code>接口是对象的状态(属性)和行为(方法)的抽象(描述)</code></p> <h2 id="接口初探"><a href="#接口初探" class="header-anchor">#</a> 接口初探</h2> <p>需求: 创建人的对象, 需要对人的属性进行一定的约束</p> <div class="language- extra-class"><pre class="language-text"><code>id是number类型, 必须有, 只读的
+name是string类型, 必须有
+age是number类型, 必须有
+sex是string类型, 可以没有
+</code></pre></div><p>下面通过一个简单示例来观察接口是如何工作的：</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// 定义人的接口</span>
+<span class="token keyword">interface</span> <span class="token class-name">IPerson</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token builtin">number</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span>
+  age<span class="token operator">:</span> <span class="token builtin">number</span>
+  sex<span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> person1<span class="token operator">:</span> IPerson <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  sex<span class="token operator">:</span> <span class="token string">'男'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>类型检查器会查看对象内部的属性是否与IPerson接口描述一致, 如果不一致就会提示类型错误。</p> <h2 id="可选属性"><a href="#可选属性" class="header-anchor">#</a> 可选属性</h2> <p>接口里的属性不全都是必需的。 有些是只在某些条件下存在，或者根本不存在。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">IPerson</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token builtin">number</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span>
+  age<span class="token operator">:</span> <span class="token builtin">number</span>
+  sex<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>带有可选属性的接口与普通的接口定义差不多，只是在可选属性名字定义的后面加一个 <code>?</code> 符号。</p> <p>可选属性的好处之一是可以对可能存在的属性进行预定义，好处之二是可以捕获引用了不存在的属性时的错误。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> person2<span class="token operator">:</span> IPerson <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  <span class="token comment">// sex: '男' // 可以没有</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="只读属性"><a href="#只读属性" class="header-anchor">#</a> 只读属性</h2> <p>一些对象属性只能在对象刚刚创建的时候修改其值。 你可以在属性名前用 <code>readonly</code> 来指定只读属性:</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">IPerson</span> <span class="token punctuation">{</span>
+  <span class="token keyword">readonly</span> id<span class="token operator">:</span> <span class="token builtin">number</span>
+  name<span class="token operator">:</span> <span class="token builtin">string</span>
+  age<span class="token operator">:</span> <span class="token builtin">number</span>
+  sex<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>一旦赋值后再也不能被改变了。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> person2<span class="token operator">:</span> IPerson <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'tom'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  <span class="token comment">// sex: '男' // 可以没有</span>
+  <span class="token comment">// xxx: 12 // error 没有在接口中定义, 不能有</span>
+<span class="token punctuation">}</span>
+person2<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">// error</span>
+</code></pre></div><h3 id="readonly-vs-const"><a href="#readonly-vs-const" class="header-anchor">#</a> readonly vs const</h3> <p>最简单判断该用 <code>readonly</code> 还是 <code>const</code> 的方法是看要把它做为变量使用还是做为一个属性。 做为变量使用的话用 <code>const</code>，若做为属性则使用 <code>readonly</code>。</p> <h2 id="函数类型"><a href="#函数类型" class="header-anchor">#</a> 函数类型</h2> <p>接口能够描述 JavaScript 中对象拥有的各种各样的外形。 除了描述带有属性的普通对象外，接口也可以描述函数类型。</p> <p>为了使用接口表示函数类型，我们需要给接口定义一个调用签名。它就像是一个只有参数列表和返回值类型的函数定义。参数列表里的每个参数都需要名字和类型。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">SearchFunc</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span>source<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> subString<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样定义后，我们可以像使用其它接口一样使用这个函数类型的接口。 下例展示了如何创建一个函数类型的变量，并将一个同类型的函数赋值给这个变量。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">const</span> mySearch<span class="token operator">:</span> <span class="token function-variable function">SearchFunc</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">source<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> sub<span class="token operator">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">boolean</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> source<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span>sub<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="类类型"><a href="#类类型" class="header-anchor">#</a> 类类型</h2> <h3 id="类实现接口"><a href="#类实现接口" class="header-anchor">#</a> 类实现接口</h3> <p>与 C# 或 Java 里接口的基本作用一样，TypeScript 也能够用它来明确的强制一个类去符合某种契约。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">Alarm</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Light</span> <span class="token punctuation">{</span>
+  <span class="token function">lightOn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+  <span class="token function">lightOff</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token keyword">implements</span> <span class="token class-name">Alarm</span> <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Car alert'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="一个类可以实现多个接口"><a href="#一个类可以实现多个接口" class="header-anchor">#</a> 一个类可以实现多个接口</h2> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">class</span> <span class="token class-name">Car2</span> <span class="token keyword">implements</span> <span class="token class-name">Alarm</span><span class="token punctuation">,</span> Light <span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Car alert'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">lightOn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Car light on'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">lightOff</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Car light off'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="接口继承接口"><a href="#接口继承接口" class="header-anchor">#</a> 接口继承接口</h2> <p>和类一样，接口也可以相互继承。 这让我们能够从一个接口里复制成员到另一个接口里，可以更灵活地将接口分割到可重用的模块里。</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name">LightableAlarm</span> <span class="token keyword">extends</span> <span class="token class-name">Alarm</span><span class="token punctuation">,</span> Light <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zhangweigaizhe/vuepressBlog/edit/master/TypeScript/chapter2/2_interface.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页 ！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">5/5/2020, 12:36:34 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepressBlog/TypeScript/chapter2/1_type.html" class="prev">
+        1. 基础类型
+      </a></span> <span class="next"><a href="/vuepressBlog/TypeScript/chapter2/3_class.html">
+        3. 类
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepressBlog/assets/js/app.c1b405af.js" defer></script><script src="/vuepressBlog/assets/js/2.c2e3befc.js" defer></script><script src="/vuepressBlog/assets/js/16.37b18be4.js" defer></script>
+  </body>
+</html>

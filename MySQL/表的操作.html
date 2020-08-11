@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>表的操作 | 小张小张有点嚣张</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="个人博客">
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.c1b405af.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/2.c2e3befc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/8.36e130b0.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.0aeed0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d3c9595c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.2ca11fc2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.ef8ea748.js"><link rel="prefetch" href="/vuepressBlog/assets/js/14.cda0af41.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.8cf3c9a9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/16.37b18be4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.35e21df8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.a4f3ce87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.9c386264.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.0c6eacb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.ccce3d92.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.3dadc292.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.9a6c3566.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.ab8ccb6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.d9ea8933.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.5ab485cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.57728a4e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/3.4718697e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.c32c57ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.71a90178.js"><link rel="prefetch" href="/vuepressBlog/assets/js/6.5781d4ba.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.e56e811f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/9.1af2aa3c.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">小张小张有点嚣张</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vuepressBlog/MySQL/MySQL安装.html" class="sidebar-link">MySQL安装</a></li><li><a href="/vuepressBlog/MySQL/表的操作.html" class="active sidebar-link">表的操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#创建表" class="sidebar-link">创建表</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#查看表结构" class="sidebar-link">查看表结构</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#表的数据类型" class="sidebar-link">表的数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_1-数值类型" class="sidebar-link">1.数值类型</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_2-日期时间类型" class="sidebar-link">2.日期时间类型</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_3-字符串类型" class="sidebar-link">3.字符串类型</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_4-enum和set类型" class="sidebar-link">4.ENUM和SET类型</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#表的完整性约束" class="sidebar-link">表的完整性约束</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_1-not-null" class="sidebar-link">1.not null</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_2-unique" class="sidebar-link">2.unique</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_3-primary-key" class="sidebar-link">3.primary key</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#_4-foreign-key" class="sidebar-link">4.foreign key</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#修改表结构" class="sidebar-link">修改表结构</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的操作.html#删除表" class="sidebar-link">删除表</a></li></ul></li><li><a href="/vuepressBlog/MySQL/表的记录操作.html" class="sidebar-link">表的记录操作</a></li><li><a href="/vuepressBlog/MySQL/pyMySQL.html" class="sidebar-link">使用python操作mysql数据库</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="表的操作"><a href="#表的操作" class="header-anchor">#</a> 表的操作</h1> <h2 id="创建表"><a href="#创建表" class="header-anchor">#</a> 创建表</h2> <div class="language- extra-class"><pre class="language-text"><code>create table 表名(
+字段名1 类型[(宽度) 约束条件],
+字段名2 类型[(宽度) 约束条件],
+字段名3 类型[(宽度) 约束条件]
+);
+
+#注意：
+1. 在同一张表中，字段名是不能相同
+2. 宽度和约束条件可选
+3. 字段名和类型是必须的
+</code></pre></div><h2 id="查看表结构"><a href="#查看表结构" class="header-anchor">#</a> 查看表结构</h2> <div class="language- extra-class"><pre class="language-text"><code>show tables; //查看当前数据库所有表
+desc [tablename]; //可以查看当前的表结构
+
+虽然desc命令可以查看表的定义，但是其输出的信息还不够全面，为了得到更全面的表定义信息，有时候就需要查看创建表的SQL语句，使用show create table语法。除了可以看到表定义之外，还可以看到engine（存储引擎）和charset（字符集）等信息。
+</code></pre></div><h2 id="表的数据类型"><a href="#表的数据类型" class="header-anchor">#</a> 表的数据类型</h2> <h3 id="_1-数值类型"><a href="#_1-数值类型" class="header-anchor">#</a> 1.数值类型</h3> <p>MySQL支持所有标准SQL数值数据类型。</p> <p>这些类型包括严格数值数据类型(INTEGER、SMALLINT、DECIMAL和NUMERIC)，以及近似数值数据类型(FLOAT、REAL和DOUBLE PRECISION)。</p> <p>关键字INT是INTEGER的同义词，关键字DEC是DECIMAL的同义词。</p> <p>MySQL支持的整数类型有TINYINT、MEDIUMINT和BIGINT。下面的表显示了需要的每个整数类型的存储和范围。</p> <p>对于小数的表示，MYSQL分为两种方式：浮点数和定点数。浮点数包括float(单精度)和double(双精度),而定点数只有decimal一种，在mysql中以字符串的形式存放，比浮点数更精确，适合用来表示货币等精度高的数据。</p> <p>BIT数据类型保存位字段值，并且支持MyISAM、MEMORY、InnoDB和BDB表。</p> <table><thead><tr><th>类型</th> <th>大小</th> <th>范围（有符号）</th> <th>范围（无符号）unsigned约束</th> <th>用途</th></tr></thead> <tbody><tr><td>TINYINT</td> <td>1 字节</td> <td>(-128，127)</td> <td>(0，255)</td> <td>小整数值</td></tr> <tr><td>SMALLINT</td> <td>2 字节</td> <td>(-32 768，32 767)</td> <td>(0，65 535)</td> <td>大整数值</td></tr> <tr><td>MEDIUMINT</td> <td>3 字节</td> <td>(-8 388 608，8 388 607)</td> <td>(0，16 777 215)</td> <td>大整数值</td></tr> <tr><td>INT或INTEGER</td> <td>4 字节</td> <td>(-2 147 483 648，2 147 483 647)</td> <td>(0，4 294 967 295)</td> <td>大整数值</td></tr> <tr><td>BIGINT</td> <td>8 字节</td> <td>(-9 233 372 036 854 775 808，9 223 372 036 854 775 807)</td> <td>(0，18 446 744 073 709 551 615)</td> <td>极大整数值</td></tr> <tr><td>FLOAT</td> <td>4 字节float(255,30)</td> <td>(-3.402 823 466 E+38，-1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)</td> <td>0，(1.175 494 351 E-38，3.402 823 466 E+38)</td> <td>单精度 浮点数值</td></tr> <tr><td>DOUBLE</td> <td>8 字节double(255,30)</td> <td>(-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td> <td>0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td> <td>双精度 浮点数值</td></tr> <tr><td>DECIMAL</td> <td>对DECIMAL(M,D) ，如果M&gt;D，为M+2否则为D+2double(65,30)</td> <td>依赖于M和D的值</td> <td>依赖于M和D的值</td> <td>小数值</td></tr></tbody></table> <h3 id="_2-日期时间类型"><a href="#_2-日期时间类型" class="header-anchor">#</a> 2.日期时间类型</h3> <table><thead><tr><th>类型</th> <th>大小 (字节)</th> <th>范围</th> <th>格式</th> <th>用途</th></tr></thead> <tbody><tr><td>DATE</td> <td>3</td> <td>1000-01-01/9999-12-31</td> <td>YYYY-MM-DD</td> <td>年月日</td></tr> <tr><td>TIME</td> <td>3</td> <td>'-838:59:59'/'838:59:59'</td> <td>HH:MM:SS</td> <td>时分秒</td></tr> <tr><td>YEAR</td> <td>1</td> <td>1901/2155</td> <td>YYYY</td> <td>年份值</td></tr> <tr><td>DATETIME</td> <td>8</td> <td>1000-01-01 00:00:00/9999-12-31 23:59:59</td> <td>YYYY-MM-DD HH:MM:SS</td> <td>年月日时分秒</td></tr> <tr><td>TIMESTAMP</td> <td>4</td> <td>1970-01-01 00:00:00/2038结束时间是第 <strong>2147483647</strong> 秒，北京时间 <strong>2038-1-19 11:14:07</strong>，格林尼治时间 2038年1月19日 凌晨 03:14:07</td> <td>YYYYMMDD HHMMSS</td> <td>混合日期和时间值，时间戳</td></tr></tbody></table> <h3 id="_3-字符串类型"><a href="#_3-字符串类型" class="header-anchor">#</a> 3.字符串类型</h3> <table><thead><tr><th>类型</th> <th>大小</th> <th>用途</th></tr></thead> <tbody><tr><td>CHAR</td> <td>0-255字节</td> <td>定长字符串</td></tr> <tr><td>VARCHAR</td> <td>0-65535 字节</td> <td>变长字符串</td></tr> <tr><td>TINYBLOB</td> <td>0-255字节</td> <td>不超过 255 个字符的二进制字符</td></tr> <tr><td>TINYTEXT</td> <td>0-255字节</td> <td>短文本字符串</td></tr> <tr><td>BLOB</td> <td>0-65 535字节</td> <td>二进制形式的长文本数据</td></tr> <tr><td>TEXT</td> <td>0-65 535字节</td> <td>长文本数据</td></tr> <tr><td>MEDIUMBLOB</td> <td>0-16 777 215字节</td> <td>二进制形式的中等长度文本数据</td></tr> <tr><td>MEDIUMTEXT</td> <td>0-16 777 215字节</td> <td>中等长度文本数据</td></tr> <tr><td>LONGBLOB</td> <td>0-4 294 967 295字节</td> <td>二进制形式的极大文本数据</td></tr> <tr><td>LONGTEXT</td> <td>0-4 294 967 295字节</td> <td>极大文本数据</td></tr></tbody></table> <h3 id="_4-enum和set类型"><a href="#_4-enum和set类型" class="header-anchor">#</a> 4.ENUM和SET类型</h3> <table><thead><tr><th>类型</th> <th>大小</th> <th>用途</th></tr></thead> <tbody><tr><td>ENUM</td> <td>对1-255个成员的枚举需要1个字节存储;对于255-65535个成员，需要2个字节存储;最多允许65535个成员。</td> <td>单选：选择性别</td></tr> <tr><td>SET</td> <td>1-8个成员的集合，占1个字节9-16个成员的集合，占2个字节17-24个成员的集合，占3个字节25-32个成员的集合，占4个字节33-64个成员的集合，占8个字节</td> <td>多选：兴趣爱好</td></tr></tbody></table> <div class="language-mysql extra-class"><pre class="language-text"><code>
+</code></pre></div><h2 id="表的完整性约束"><a href="#表的完整性约束" class="header-anchor">#</a> 表的完整性约束</h2> <h3 id="_1-not-null"><a href="#_1-not-null" class="header-anchor">#</a> 1.not null</h3> <p>是否可空，null表示空，非字符串
+not null - 不可空
+null - 可空</p> <div class="language- extra-class"><pre class="language-text"><code>mysql&gt; create table t12 (id int not null);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql&gt; select * from t12;
+Empty set (0.00 sec)
+
+mysql&gt; desc t12;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| id    | int(11) | NO   |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+#不能向id列插入空元素。 
+mysql&gt; insert into t12 values (null);
+ERROR 1048 (23000): Column 'id' cannot be null
+
+mysql&gt; insert into t12 values (1);
+Query OK, 1 row affected (0.01 sec)
+
+not null示例
+</code></pre></div><p>我们约束某一列不为空，如果这一列中经常有重复的内容，就需要我们频繁的插入，这样会给我们的操作带来新的负担，于是就出现了默认值的概念。</p> <p>默认值，创建列时可以指定默认值，当插入数据时如果未主动设置，则自动添加默认值</p> <p><strong>default</strong></p> <div class="language- extra-class"><pre class="language-text"><code> create table t13 (id1 int not null,id2 int not null default 222);
+</code></pre></div><h3 id="_2-unique"><a href="#_2-unique" class="header-anchor">#</a> 2.unique</h3> <p>唯一约束，指定某列或者几列组合不能重复</p> <div class="language- extra-class"><pre class="language-text"><code>方法一：
+create table department1(
+id int,
+name varchar(20) unique,
+comment varchar(100)
+);
+
+
+方法二：
+create table department2(
+id int,
+name varchar(20),
+comment varchar(100),
+unique(name)
+);
+</code></pre></div><h3 id="_3-primary-key"><a href="#_3-primary-key" class="header-anchor">#</a> 3.primary key</h3> <p>主键为了保证表中的每一条数据的该字段都是表格中的唯一值。换言之，它是用来独一无二地确认一个表格中的每一行数据。
+主键可以包含一个字段或多个字段。当主键包含多个栏位时，称为组合键 (Composite Key),也可以叫联合主键。
+主键可以在建置新表格时设定 (运用 CREATE TABLE 语句)，或是以改变现有的表格架构方式设定 (运用 ALTER TABLE)。
+主键必须唯一，主键值非空；可以是单一字段，也可以是多字段组合。</p> <p>3.1 单字段主键</p> <div class="language- extra-class"><pre class="language-text"><code>#方法一：not null+unique
+create table department1(
+	id int not null unique, #主键
+	name varchar(20) not null unique,
+	comment varchar(100)
+);
+#方法二：在某一个字段后用primary key
+create table department2(
+	id int primary key, #主键
+	name varchar(20),
+	comment varchar(100)
+);
+#方法三：在所有字段后单独定义primary key
+create table department3(
+	id int,
+	name varchar(20),
+	comment varchar(100),
+	primary key(id); #创建主键并为其命名pk_name
+)
+</code></pre></div><p>3.2 多字段主键</p> <div class="language- extra-class"><pre class="language-text"><code>create table service(
+	ip varchar(15),
+	port char(5),
+	service_name varchar(10) not null,
+	primary key(ip,port)
+);
+</code></pre></div><p>​	<strong>auto_increment</strong></p> <p>约束字段为自动增长，被约束的字段必须同时被key约束</p> <h3 id="_4-foreign-key"><a href="#_4-foreign-key" class="header-anchor">#</a> 4.foreign key</h3> <p>多表 ：</p> <p>假设我们要描述所有公司的员工，需要描述的属性有这些 ： 工号 姓名 部门</p> <p>公司有3个部门，但是有1个亿的员工，那意味着部门这个字段需要重复存储，部门名字越长，越浪费</p> <p>解决方法： 我们完全可以定义一个部门表 然后让员工信息表关联该表，如何关联，即foreign key</p> <div class="language- extra-class"><pre class="language-text"><code>create table staff_info (
+	s_id int,name varchar(20),
+	dep_id int,
+	foreign key(dep_id) references departments(dep_id) //被关联表的字段必需是唯一
+);
+</code></pre></div><h2 id="修改表结构"><a href="#修改表结构" class="header-anchor">#</a> 修改表结构</h2> <div class="language- extra-class"><pre class="language-text"><code>语法：
+1. 修改表名
+      ALTER TABLE 表名 
+                      RENAME 新表名;
+
+2. 增加字段
+      ALTER TABLE 表名
+                      ADD 字段名  数据类型 [完整性约束条件…],
+                      ADD 字段名  数据类型 [完整性约束条件…];
+                            
+3. 删除字段
+      ALTER TABLE 表名 
+                      DROP 字段名;
+
+4. 修改字段
+      ALTER TABLE 表名 
+                      MODIFY  字段名 数据类型 [完整性约束条件…];
+      ALTER TABLE 表名 
+                      CHANGE 旧字段名 新字段名 旧数据类型 [完整性约束条件…];
+      ALTER TABLE 表名 
+                      CHANGE 旧字段名 新字段名 新数据类型 [完整性约束条件…];
+
+5.修改字段排列顺序/在增加的时候指定字段位置
+    ALTER TABLE 表名
+                     ADD 字段名  数据类型 [完整性约束条件…]  FIRST;
+    ALTER TABLE 表名
+                     ADD 字段名  数据类型 [完整性约束条件…]  AFTER 字段名;
+    ALTER TABLE 表名
+                     CHANGE 字段名  旧字段名 新字段名 新数据类型 [完整性约束条件…]  FIRST;
+    ALTER TABLE 表名
+                     MODIFY 字段名  数据类型 [完整性约束条件…]  AFTER 字段名;
+</code></pre></div><h2 id="删除表"><a href="#删除表" class="header-anchor">#</a> 删除表</h2> <div class="language- extra-class"><pre class="language-text"><code>DROP TABLE 表名;
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zhangweigaizhe/vuepressBlog/edit/master/MySQL/表的操作.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页 ！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepressBlog/MySQL/MySQL安装.html" class="prev">
+        MySQL安装
+      </a></span> <span class="next"><a href="/vuepressBlog/MySQL/表的记录操作.html">
+        表的记录操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepressBlog/assets/js/app.c1b405af.js" defer></script><script src="/vuepressBlog/assets/js/2.c2e3befc.js" defer></script><script src="/vuepressBlog/assets/js/8.36e130b0.js" defer></script>
+  </body>
+</html>

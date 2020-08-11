@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL安装 | 小张小张有点嚣张</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="个人博客">
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.c1b405af.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/2.c2e3befc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/6.5781d4ba.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.0aeed0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d3c9595c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.2ca11fc2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.ef8ea748.js"><link rel="prefetch" href="/vuepressBlog/assets/js/14.cda0af41.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.8cf3c9a9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/16.37b18be4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.35e21df8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.a4f3ce87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.9c386264.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.0c6eacb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.ccce3d92.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.3dadc292.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.9a6c3566.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.ab8ccb6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.d9ea8933.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.5ab485cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.57728a4e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/3.4718697e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.c32c57ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.71a90178.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.e56e811f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/8.36e130b0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/9.1af2aa3c.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">小张小张有点嚣张</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vuepressBlog/MySQL/MySQL安装.html" class="active sidebar-link">MySQL安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/MySQL安装.html#_1-下载mysql解压版" class="sidebar-link">1.下载MySQL解压版</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/MySQL安装.html#_2-解压安装包" class="sidebar-link">2.解压安装包</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/MySQL安装.html#_3-配置环境变量" class="sidebar-link">3.配置环境变量</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/MySQL安装.html#_4-创建my-nin文件" class="sidebar-link">4.创建my.nin文件</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/MySQL安装.html#_5-执行mysql" class="sidebar-link">5.执行MySQL</a></li></ul></li><li><a href="/vuepressBlog/MySQL/表的操作.html" class="sidebar-link">表的操作</a></li><li><a href="/vuepressBlog/MySQL/表的记录操作.html" class="sidebar-link">表的记录操作</a></li><li><a href="/vuepressBlog/MySQL/pyMySQL.html" class="sidebar-link">使用python操作mysql数据库</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql安装"><a href="#mysql安装" class="header-anchor">#</a> MySQL安装</h1> <h2 id="_1-下载mysql解压版"><a href="#_1-下载mysql解压版" class="header-anchor">#</a> 1.下载MySQL解压版</h2> <p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener noreferrer">下载地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_2-解压安装包"><a href="#_2-解压安装包" class="header-anchor">#</a> 2.解压安装包</h2> <p>.解压安装包，根据自己的喜好选择路径，我选择的路径是D盘，因此MySQL的完整路径为：D:\Program Files\MySQL</p> <h2 id="_3-配置环境变量"><a href="#_3-配置环境变量" class="header-anchor">#</a> 3.配置环境变量</h2> <p>值为：D:\Program Files\MySQL\bin</p> <h2 id="_4-创建my-nin文件"><a href="#_4-创建my-nin文件" class="header-anchor">#</a> 4.创建my.nin文件</h2> <p>可以先新建一个<code>my.txt</code>文件，然后通过重命名修改文件后缀为<code>.ini</code>，以前的版本解压后或许会存在my.ini文件，但是5.7.21版本没有，因此要自己手动创建该文件，文件的内容如下：</p> <div class="language- extra-class"><pre class="language-text"><code>[client]
+port=3306
+default-character-set=utf8
+
+[mysql] 
+default-character-set=utf8 
+
+[mysqld] 
+port = 3306 
+basedir=D:/Program Files/MySQL //此处为你安装的路径
+datadir=D:/Program Files/MySQL/data  //此处为你安装的路径
+collation-server = utf8_unicode_ci
+init-connect='SET NAMES utf8'
+character-set-server = utf8
+max_connections=200 
+default-storage-engine=INNODB 
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES 
+</code></pre></div><h2 id="_5-执行mysql"><a href="#_5-执行mysql" class="header-anchor">#</a> 5.执行MySQL</h2> <p>1.以管理员身份打开cmd命令窗口，将目录切换到MySQL的安装目录的 <strong>bin目录</strong> 下</p> <p>2.执行以下语句进行MySQL的安装</p> <div class="language- extra-class"><pre class="language-text"><code>mysqld -install
+</code></pre></div><p>执行命令后提示：<code>Service successfully installed</code>. 表示安装成功
+3.执行以下语句进行MySQL的初始化</p> <div class="language- extra-class"><pre class="language-text"><code>mysqld --initialize-insecure --user=mysql 
+</code></pre></div><p>执行命令后会在MySQL的安装目录下生成data目录并创建root用户。
+4.执行以下命令以启动mysql服务</p> <div class="language- extra-class"><pre class="language-text"><code>net start mysql
+</code></pre></div><p>5.启动MySQL之后，root用户的密码为空，设置密码，命令如下：</p> <div class="language- extra-class"><pre class="language-text"><code>mysqladmin -u root -p password 新密码
+Enter password: 旧密码 //第一次直接回车
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zhangweigaizhe/vuepressBlog/edit/master/MySQL/MySQL安装.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页 ！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/vuepressBlog/MySQL/表的操作.html">
+        表的操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepressBlog/assets/js/app.c1b405af.js" defer></script><script src="/vuepressBlog/assets/js/2.c2e3befc.js" defer></script><script src="/vuepressBlog/assets/js/6.5781d4ba.js" defer></script>
+  </body>
+</html>

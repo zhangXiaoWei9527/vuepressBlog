@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>表的记录操作 | 小张小张有点嚣张</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="个人博客">
+    <link rel="preload" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css" as="style"><link rel="preload" href="/vuepressBlog/assets/js/app.c1b405af.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/2.c2e3befc.js" as="script"><link rel="preload" href="/vuepressBlog/assets/js/9.1af2aa3c.js" as="script"><link rel="prefetch" href="/vuepressBlog/assets/js/10.0aeed0a0.js"><link rel="prefetch" href="/vuepressBlog/assets/js/11.d3c9595c.js"><link rel="prefetch" href="/vuepressBlog/assets/js/12.2ca11fc2.js"><link rel="prefetch" href="/vuepressBlog/assets/js/13.ef8ea748.js"><link rel="prefetch" href="/vuepressBlog/assets/js/14.cda0af41.js"><link rel="prefetch" href="/vuepressBlog/assets/js/15.8cf3c9a9.js"><link rel="prefetch" href="/vuepressBlog/assets/js/16.37b18be4.js"><link rel="prefetch" href="/vuepressBlog/assets/js/17.35e21df8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/18.a4f3ce87.js"><link rel="prefetch" href="/vuepressBlog/assets/js/19.9c386264.js"><link rel="prefetch" href="/vuepressBlog/assets/js/20.0c6eacb8.js"><link rel="prefetch" href="/vuepressBlog/assets/js/21.ccce3d92.js"><link rel="prefetch" href="/vuepressBlog/assets/js/22.3dadc292.js"><link rel="prefetch" href="/vuepressBlog/assets/js/23.9a6c3566.js"><link rel="prefetch" href="/vuepressBlog/assets/js/24.ab8ccb6d.js"><link rel="prefetch" href="/vuepressBlog/assets/js/25.d9ea8933.js"><link rel="prefetch" href="/vuepressBlog/assets/js/26.5ab485cd.js"><link rel="prefetch" href="/vuepressBlog/assets/js/27.57728a4e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/3.4718697e.js"><link rel="prefetch" href="/vuepressBlog/assets/js/4.c32c57ad.js"><link rel="prefetch" href="/vuepressBlog/assets/js/5.71a90178.js"><link rel="prefetch" href="/vuepressBlog/assets/js/6.5781d4ba.js"><link rel="prefetch" href="/vuepressBlog/assets/js/7.e56e811f.js"><link rel="prefetch" href="/vuepressBlog/assets/js/8.36e130b0.js">
+    <link rel="stylesheet" href="/vuepressBlog/assets/css/0.styles.b4a764d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepressBlog/" class="home-link router-link-active"><!----> <span class="site-name">小张小张有点嚣张</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vuepressBlog/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vuepressBlog/vuepress/01_初始化vuepress.html" class="nav-link">
+  vuepress指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/TypeScript/chapter1/01_初识TS.html" class="nav-link">
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/Vue/Vue.html" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vuepressBlog/Dgango/ORM.html" class="nav-link">
+  Dgango
+</a></li><li class="dropdown-item"><!----> <a href="/vuepressBlog/MySQL/MySQL安装.html" class="nav-link">
+  MySQL
+</a></li></ul></div></div> <a href="https://github.com/zhangweigaizhe/vuepressBlog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/vuepressBlog/MySQL/MySQL安装.html" class="sidebar-link">MySQL安装</a></li><li><a href="/vuepressBlog/MySQL/表的操作.html" class="sidebar-link">表的操作</a></li><li><a href="/vuepressBlog/MySQL/表的记录操作.html" class="active sidebar-link">表的记录操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#插入数据insert" class="sidebar-link">插入数据insert</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#更新数据update" class="sidebar-link">更新数据update</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#删除数据delete" class="sidebar-link">删除数据delete</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#查询数据-单表查询-select" class="sidebar-link">查询数据-单表查询 select</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_1-简单查询" class="sidebar-link">1.简单查询</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_2-where约束" class="sidebar-link">2.where约束</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_3-group-by" class="sidebar-link">3.group by</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_4-聚合函数" class="sidebar-link">4.聚合函数</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_5-having过滤" class="sidebar-link">5.having过滤</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_6-order-by查询排序" class="sidebar-link">6.order by查询排序</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_7-limit-限制查询的记录数" class="sidebar-link">7.limit 限制查询的记录数</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_8-使用正则表达式查询" class="sidebar-link">8.使用正则表达式查询</a></li></ul></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#查询数据-多表查询-select" class="sidebar-link">查询数据-多表查询 select</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_1-多表连接查询" class="sidebar-link">1.多表连接查询</a></li><li class="sidebar-sub-header"><a href="/vuepressBlog/MySQL/表的记录操作.html#_2-子查询" class="sidebar-link">2.子查询</a></li></ul></li></ul></li><li><a href="/vuepressBlog/MySQL/pyMySQL.html" class="sidebar-link">使用python操作mysql数据库</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="表的记录操作"><a href="#表的记录操作" class="header-anchor">#</a> 表的记录操作</h1> <p>MySQL数据操作： DML</p> <p>在MySQL管理软件中，可以通过SQL语句中的DML语言来实现数据的操作，包括</p> <p>1.使用INSERT实现数据的插入
+2.UPDATE实现数据的更新
+3.使用DELETE实现数据的删除
+4.使用SELECT查询数据以及</p> <h2 id="插入数据insert"><a href="#插入数据insert" class="header-anchor">#</a> 插入数据insert</h2> <div class="language- extra-class"><pre class="language-text"><code>1. 插入完整数据（顺序插入）
+    语法一：
+    INSERT INTO 表名(字段1,字段2,字段3…字段n) VALUES(值1,值2,值3…值n);
+
+    语法二：
+    INSERT INTO 表名 VALUES (值1,值2,值3…值n);
+
+2. 指定字段插入数据
+    语法：
+    INSERT INTO 表名(字段1,字段2,字段3…) VALUES (值1,值2,值3…);
+
+3. 插入多条记录
+    语法：
+    INSERT INTO 表名 VALUES
+        (值1,值2,值3…值n),
+        (值1,值2,值3…值n),
+        (值1,值2,值3…值n);
+        
+4. 插入查询结果
+    语法：
+    INSERT INTO 表名(字段1,字段2,字段3…字段n) 
+                    SELECT (字段1,字段2,字段3…字段n) FROM 表2
+                    WHERE …;
+</code></pre></div><h2 id="更新数据update"><a href="#更新数据update" class="header-anchor">#</a> 更新数据update</h2> <div class="language- extra-class"><pre class="language-text"><code>语法：
+    UPDATE 表名 SET
+        字段1=值1,
+        字段2=值2,
+        WHERE CONDITION;
+
+示例：
+    UPDATE mysql.user SET password=password(‘123’) 
+        where user=’root’ and host=’localhost’;
+</code></pre></div><h2 id="删除数据delete"><a href="#删除数据delete" class="header-anchor">#</a> 删除数据delete</h2> <div class="language- extra-class"><pre class="language-text"><code>语法：
+    DELETE FROM 表名 
+        WHERE CONITION;
+
+示例：
+    DELETE FROM mysql.user 
+        WHERE password=’’;
+
+练习：
+    更新MySQL root用户密码为mysql123
+    删除除从本地登录的root用户以外的所有用户
+</code></pre></div><h2 id="查询数据-单表查询-select"><a href="#查询数据-单表查询-select" class="header-anchor">#</a> 查询数据-单表查询 select</h2> <ul><li><p>单表查询语法</p> <div class="language- extra-class"><pre class="language-text"><code>SELECT DISTINCT 字段1,字段2... FROM 表名
+                              WHERE 条件
+                              GROUP BY field
+                              HAVING 筛选
+                              ORDER BY field
+                              LIMIT 限制条数
+</code></pre></div></li> <li><p>关键字优先级</p> <p><code>from, where, group by, select, distinct, having, order by, limit</code></p> <p><strong>1.找到表:from</strong></p> <p><strong>2.拿着where指定的约束条件，去文件/表中取出一条条记录</strong></p> <p><strong>3.将取出的一条条记录进行分组group by，如果没有group by，则整体作为一组</strong></p> <p><strong>4.执行select（去重）</strong></p> <p><strong>5.将分组的结果进行having过滤</strong></p> <p><strong>6.将结果按条件排序：order by</strong></p> <p><strong>7.限制结果的显示条数</strong></p></li></ul> <h3 id="_1-简单查询"><a href="#_1-简单查询" class="header-anchor">#</a> 1.简单查询</h3> <div class="language- extra-class"><pre class="language-text"><code>#简单查询
+    SELECT id,emp_name,sex,age,hire_date,post,post_comment,salary,office,depart_id
+    FROM employee;
+
+    SELECT * FROM employee;
+
+    SELECT emp_name,salary FROM employee;
+
+#避免重复DISTINCT
+    SELECT DISTINCT post FROM employee;    
+
+#通过四则运算查询
+    SELECT emp_name, salary*12 FROM employee;
+    SELECT emp_name, salary*12 AS Annual_salary FROM employee;
+    SELECT emp_name, salary*12 Annual_salary FROM employee;
+
+#定义显示格式
+   CONCAT() 函数用于连接字符串
+   SELECT CONCAT('姓名: ',emp_name,'  年薪: ', salary*12)  AS Annual_salary
+   FROM employee;
+   
+   CONCAT_WS() 第一个参数为分隔符
+   SELECT CONCAT_WS(':',emp_name,salary*12)  AS Annual_salary 
+   FROM employee;
+
+   结合CASE语句：
+   SELECT
+       (
+           CASE
+           WHEN emp_name = 'jingliyang' THEN
+               emp_name
+           WHEN emp_name = 'alex' THEN
+               CONCAT(emp_name,'_BIGSB')
+           ELSE
+               concat(emp_name, 'SB')
+           END
+       ) as new_name
+   FROM
+       employee;
+
+</code></pre></div><h3 id="_2-where约束"><a href="#_2-where约束" class="header-anchor">#</a> 2.where约束</h3> <p>where字句中可以使用：</p> <ol><li>比较运算符：&gt; &lt; &gt;= &lt;= &lt;&gt; !=</li> <li>between 80 and 100 值在80到100之间</li> <li>in(80,90,100) 值是80或90或100</li> <li>like 'e%'
+通配符可以是%或_，
+    %表示任意多字符
+    _表示一个字符</li> <li>逻辑运算符：在多个条件直接可以使用逻辑运算符 and or not</li></ol> <div class="language- extra-class"><pre class="language-text"><code>#1:单条件查询
+    SELECT emp_name FROM employee
+        WHERE post='sale';
+        
+#2:多条件查询
+    SELECT emp_name,salary FROM employee
+        WHERE post='teacher' AND salary&gt;10000;
+
+#3:关键字BETWEEN AND
+    SELECT emp_name,salary FROM employee
+        WHERE salary BETWEEN 10000 AND 20000;
+
+    SELECT emp_name,salary FROM employee 
+        WHERE salary NOT BETWEEN 10000 AND 20000;
+    
+#4:关键字IS NULL(判断某个字段是否为NULL不能用等号，需要用IS)
+    SELECT emp_name,post_comment FROM employee 
+        WHERE post_comment IS NULL;
+
+    SELECT emp_name,post_comment FROM employee 
+        WHERE post_comment IS NOT NULL;
+        
+    SELECT emp_name,post_comment FROM employee 
+        WHERE post_comment=''; 注意''是空字符串，不是null
+    ps：
+        执行
+        update employee set post_comment='' where id=2;
+        再用上条查看，就会有结果了
+
+#5:关键字IN集合查询
+    SELECT emp_name,salary FROM employee 
+        WHERE salary=3000 OR salary=3500 OR salary=4000 OR salary=9000;
+    
+    SELECT emp_name,salary FROM employee 
+        WHERE salary IN (3000,3500,4000,9000) ;
+
+    SELECT emp_name,salary FROM employee 
+        WHERE salary NOT IN (3000,3500,4000,9000) ;
+
+#6:关键字LIKE模糊查询
+    通配符’%’
+    SELECT * FROM employee 
+            WHERE emp_name LIKE 'eg%';
+
+    通配符’_’
+    SELECT * FROM employee 
+            WHERE emp_name LIKE 'al__';
+</code></pre></div><h3 id="_3-group-by"><a href="#_3-group-by" class="header-anchor">#</a> 3.group by</h3> <div class="language- extra-class"><pre class="language-text"><code>单独使用GROUP BY关键字分组
+    SELECT post FROM employee GROUP BY post;
+    注意：我们按照post字段分组，那么select查询的字段只能是post，想要获取组内的其他相关信息，需要借助函数
+
+GROUP BY关键字和GROUP_CONCAT()函数一起使用
+    SELECT post,GROUP_CONCAT(emp_name) FROM employee GROUP BY post;#按照岗位分组，并查看组内成员名
+    SELECT post,GROUP_CONCAT(emp_name) as emp_members FROM employee GROUP BY post;
+
+GROUP BY与聚合函数一起使用
+    select post,count(id) as count from employee group by post;#按照岗位分组，并查看每个组有多少人
+</code></pre></div><p><strong>如果我们用unique的字段作为分组的依据，则每一条记录自成一组，这种分组没有意义.多条记录之间的某个字段值相同，该字段通常用来作为分组的依据</strong></p> <h3 id="_4-聚合函数"><a href="#_4-聚合函数" class="header-anchor">#</a> 4.聚合函数</h3> <div class="language-mysql extra-class"><pre class="language-text"><code>#强调：聚合函数聚合的是组的内容，若是没有分组，则默认一组
+
+示例：
+    SELECT COUNT(*) FROM employee;
+    SELECT COUNT(*) FROM employee WHERE depart_id=1;
+    SELECT MAX(salary) FROM employee;
+    SELECT MIN(salary) FROM employee;
+    SELECT AVG(salary) FROM employee;
+    SELECT SUM(salary) FROM employee;
+    SELECT SUM(salary) FROM employee WHERE depart_id=3;
+</code></pre></div><h3 id="_5-having过滤"><a href="#_5-having过滤" class="header-anchor">#</a> 5.having过滤</h3> <p><strong>HAVING与WHERE不一样的地方在于!!!!!!</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#！！！执行优先级从高到低：where &gt; group by &gt; having 
+#1. Where 发生在分组group by之前，因而Where中可以有任意字段，但是绝对不能使用聚合函数。
+#2. Having发生在分组group by之后，因而Having中可以使用分组的字段，无法直接取到其他字段,可以使用聚合函数
+</code></pre></div><h3 id="_6-order-by查询排序"><a href="#_6-order-by查询排序" class="header-anchor">#</a> 6.order by查询排序</h3> <div class="language- extra-class"><pre class="language-text"><code>按单列排序
+    SELECT * FROM employee ORDER BY salary;      //升序
+    SELECT * FROM employee ORDER BY salary ASC;  //升序
+    SELECT * FROM employee ORDER BY salary DESC; //降序
+
+按多列排序:先按照age排序，如果年纪相同，则按照薪资排序
+    SELECT * from employee
+        ORDER BY age,
+        salary DESC;
+</code></pre></div><h3 id="_7-limit-限制查询的记录数"><a href="#_7-limit-限制查询的记录数" class="header-anchor">#</a> 7.limit 限制查询的记录数</h3> <div class="language- extra-class"><pre class="language-text"><code>示例：
+    SELECT * FROM employee ORDER BY salary DESC 
+        LIMIT 3;                    #默认初始位置为0 
+    
+    SELECT * FROM employee ORDER BY salary DESC
+        LIMIT 0,5; #从第0开始，即先查询出第一条，然后包含这一条在内往后查5条
+
+    SELECT * FROM employee ORDER BY salary DESC
+        LIMIT 5,5; #从第5开始，即先查询出第6条，然后包含这一条在内往后查5条
+</code></pre></div><h3 id="_8-使用正则表达式查询"><a href="#_8-使用正则表达式查询" class="header-anchor">#</a> 8.使用正则表达式查询</h3> <div class="language- extra-class"><pre class="language-text"><code>SELECT * FROM employee WHERE emp_name REGEXP '^ale';
+
+SELECT * FROM employee WHERE emp_name REGEXP 'on$';
+
+SELECT * FROM employee WHERE emp_name REGEXP 'm{2}';
+
+小结：对字符串匹配的方式
+WHERE emp_name = 'egon';
+WHERE emp_name LIKE 'yua%';
+WHERE emp_name REGEXP 'on$';
+</code></pre></div><h2 id="查询数据-多表查询-select"><a href="#查询数据-多表查询-select" class="header-anchor">#</a> 查询数据-多表查询 select</h2> <p>建表与数据准备</p> <div class="language- extra-class"><pre class="language-text"><code>#建表
+create table department(
+id int,
+name varchar(20) 
+);
+
+create table employee(
+id int primary key auto_increment,
+name varchar(20),
+sex enum('male','female') not null default 'male',
+age int,
+dep_id int
+);
+
+#插入数据
+insert into department values
+(200,'技术'),
+(201,'人力资源'),
+(202,'销售'),
+(203,'运营');
+
+insert into employee(name,sex,age,dep_id) values
+('egon','male',18,200),
+('alex','female',48,201),
+('wupeiqi','male',38,201),
+('yuanhao','female',28,202),
+('liwenzhou','male',18,200),
+('jingliyang','female',18,204)
+;
+</code></pre></div><h3 id="_1-多表连接查询"><a href="#_1-多表连接查询" class="header-anchor">#</a> 1.多表连接查询</h3> <p><strong>1 交叉连接：不适用任何匹配条件。生成笛卡尔积</strong></p> <div class="language- extra-class"><pre class="language-text"><code>mysql&gt; select * from employee,department;
+</code></pre></div><p><strong>2 内连接：只连接匹配的行</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#找两张表共有的部分，相当于利用条件从笛卡尔积结果中筛选出了正确的结果
+#department没有204这个部门，因而employee表中关于204这条员工信息没有匹配出来
+mysql&gt; select employee.id,employee.name,employee.age,employee.sex,department.name from employee inner join department on employee.dep_id=department.id; 
++----+-----------+------+--------+--------------+
+| id | name      | age  | sex    | name         |
++----+-----------+------+--------+--------------+
+|  1 | egon      |   18 | male   | 技术         |
+|  2 | alex      |   48 | female | 人力资源     |
+|  3 | wupeiqi   |   38 | male   | 人力资源     |
+|  4 | yuanhao   |   28 | female | 销售         |
+|  5 | liwenzhou |   18 | male   | 技术         |
++----+-----------+------+--------+--------------+
+
+#上述sql等同于
+mysql&gt; select employee.id,employee.name,employee.age,employee.sex,department.name from employee,department where employee.dep_id=department.id;
+</code></pre></div><p><strong>3 外链接之左连接：优先显示左表全部记录</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#以右表为准，即找出所有部门信息，包括没有员工的部门
+#本质就是：在内连接的基础上增加右边有左边没有的结果
+mysql&gt; select employee.id,employee.name,department.name as depart_name from employee right join department on employee.dep_id=department.id;
++------+-----------+--------------+
+| id   | name      | depart_name  |
++------+-----------+--------------+
+|    1 | egon      | 技术         |
+|    2 | alex      | 人力资源     |
+|    3 | wupeiqi   | 人力资源     |
+|    4 | yuanhao   | 销售         |
+|    5 | liwenzhou | 技术         |
+| NULL | NULL      | 运营         |
++------+-----------+--------------+
+</code></pre></div><p><strong>4 外链接之右连接：优先显示右表全部记录</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#以右表为准，即找出所有部门信息，包括没有员工的部门
+#本质就是：在内连接的基础上增加右边有左边没有的结果
+mysql&gt; select employee.id,employee.name,department.name as depart_name from employee right join department on employee.dep_id=department.id;
++------+-----------+--------------+
+| id   | name      | depart_name  |
++------+-----------+--------------+
+|    1 | egon      | 技术         |
+|    2 | alex      | 人力资源     |
+|    3 | wupeiqi   | 人力资源     |
+|    4 | yuanhao   | 销售         |
+|    5 | liwenzhou | 技术         |
+| NULL | NULL      | 运营         |
++------+-----------+--------------+
+</code></pre></div><p><strong>5 全外连接：显示左右两个表全部记录</strong></p> <div class="language- extra-class"><pre class="language-text"><code>全外连接：在内连接的基础上增加左边有右边没有的和右边有左边没有的结果
+#注意：mysql不支持全外连接 full JOIN
+#强调：mysql可以使用此种方式间接实现全外连接
+select * from employee left join department on employee.dep_id = department.id
+union
+select * from employee right join department on employee.dep_id = department.id
+;
+#查看结果
++------+------------+--------+------+--------+------+--------------+
+| id   | name       | sex    | age  | dep_id | id   | name         |
++------+------------+--------+------+--------+------+--------------+
+|    1 | egon       | male   |   18 |    200 |  200 | 技术         |
+|    5 | liwenzhou  | male   |   18 |    200 |  200 | 技术         |
+|    2 | alex       | female |   48 |    201 |  201 | 人力资源     |
+|    3 | wupeiqi    | male   |   38 |    201 |  201 | 人力资源     |
+|    4 | yuanhao    | female |   28 |    202 |  202 | 销售         |
+|    6 | jingliyang | female |   18 |    204 | NULL | NULL        |
+| NULL | NULL       | NULL   | NULL |   NULL |  203 | 运营         |
++------+------------+--------+------+--------+------+--------------+
+
+#注意 union与union all的区别：union会去掉相同的纪录
+</code></pre></div><h3 id="_2-子查询"><a href="#_2-子查询" class="header-anchor">#</a> 2.子查询</h3> <div class="language- extra-class"><pre class="language-text"><code>#1：子查询是将一个查询语句嵌套在另一个查询语句中。
+#2：内层查询语句的查询结果，可以为外层查询语句提供查询条件。
+#3：子查询中可以包含：IN、NOT IN、ANY、ALL、EXISTS 和 NOT EXISTS等关键字
+#4：还可以包含比较运算符：= 、 !=、&gt; 、&lt;等
+</code></pre></div><p><strong>1 带IN关键字的子查询</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#查询平均年龄在25岁以上的部门名
+select id,name from department
+    where id in 
+        (select dep_id from employee group by dep_id having avg(age) &gt; 25);
+
+#查看技术部员工姓名
+select name from employee
+    where dep_id in 
+        (select id from department where name='技术');
+
+#查看不足1人的部门名(子查询得到的是有人的部门id)
+select name from department where id not in (select distinct dep_id from employee);
+</code></pre></div><p><strong>2 带比较运算符的子查询</strong></p> <div class="language- extra-class"><pre class="language-text"><code>#比较运算符：=、!=、&gt;、&gt;=、&lt;、&lt;=、&lt;&gt;
+#查询大于所有人平均年龄的员工名与年龄
+mysql&gt; select name,age from emp where age &gt; (select avg(age) from emp);
++---------+------+
+| name    | age  |
++---------+------+
+| alex    | 48   |
+| wupeiqi | 38   |
++---------+------+
+2 rows in set (0.00 sec)
+
+
+#查询大于部门内平均年龄的员工名、年龄
+select t1.name,t1.age from emp t1
+inner join 
+(select dep_id,avg(age) avg_age from emp group by dep_id) t2
+on t1.dep_id = t2.dep_id
+where t1.age &gt; t2.avg_age; 
+</code></pre></div><p><strong>3 带EXISTS关键字的子查询</strong></p> <p>EXISTS关字键字表示存在。在使用EXISTS关键字时，内层查询语句不返回查询的记录。
+而是返回一个真假值。True或False
+当返回True时，外层查询语句将进行查询；当返回值为False时，外层查询语句不进行查询</p> <div class="language- extra-class"><pre class="language-text"><code>#department表中存在dept_id=203，Ture
+mysql&gt; select * from employee
+    -&gt;     where exists
+    -&gt;         (select id from department where id=200);
++----+------------+--------+------+--------+
+| id | name       | sex    | age  | dep_id |
++----+------------+--------+------+--------+
+|  1 | egon       | male   |   18 |    200 |
+|  2 | alex       | female |   48 |    201 |
+|  3 | wupeiqi    | male   |   38 |    201 |
+|  4 | yuanhao    | female |   28 |    202 |
+|  5 | liwenzhou  | male   |   18 |    200 |
+|  6 | jingliyang | female |   18 |    204 |
++----+------------+--------+------+--------+
+
+#department表中存在dept_id=205，False
+mysql&gt; select * from employee
+    -&gt;     where exists
+    -&gt;         (select id from department where id=204);
+Empty set (0.00 sec)
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zhangweigaizhe/vuepressBlog/edit/master/MySQL/表的记录操作.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页 ！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepressBlog/MySQL/表的操作.html" class="prev">
+        表的操作
+      </a></span> <span class="next"><a href="/vuepressBlog/MySQL/pyMySQL.html">
+        使用python操作mysql数据库
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepressBlog/assets/js/app.c1b405af.js" defer></script><script src="/vuepressBlog/assets/js/2.c2e3befc.js" defer></script><script src="/vuepressBlog/assets/js/9.1af2aa3c.js" defer></script>
+  </body>
+</html>
